@@ -355,3 +355,20 @@ JS is a lang that you can use to
 	- Interact with HTML
 	- Interact with the web browser
 	- Interact with other systems(like APIs)
+
+
+
+
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+JAVASCRIPT
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+java scripti is a multi-platfrom language. It will run on any modern web browser , it is useful to create a native applications on smartphones and tablets it can create desktop softwares for Mac and Windows computers and it can run on backend servers as well  , no matter where you want to your application to run you can code it in JS
+
+We use tool called Plunker
