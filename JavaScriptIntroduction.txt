@@ -1,0 +1,357 @@
+1.World Wide Web: 
+is an information space where documents and other web resources are identified by Uniform Resource Locators(URLs) interlinked by hypertext links and can be accessed by Internet.
+
+2.Ingredients for the Web
+	1.Html(resources like documents, images other files)
+	2.URLs
+	3.Http (Hypertext Transfer Protocol) 
+
+3.To use the web, you need:
+ A web server , that hosts resources like documents
+ URLs that identify those resources on the webserver
+ Protocols that can be used to transfer resources
+ A web browser, to view documents and use resources
+
+
+ HTML is the standard markup language for creating webpages and web applications.
+ Who manages the HTML specification?
+ 1990  - Tim Berners-Lee
+ 1993  - Internet Engineering Task Force(IETF)
+ 1996  - World wide web consortium(w3C)
+ 2000  - International Organization for Standardization(ISO)
+ 		 International Electortechnical Commission (IEC)
+ 		 (IS0/IEC 15445:2000)
+ 2004  - Web Hypertext Application Technology Working Group(WHATWG)
+
+ <header></header>  this represents a container for introductory content or a set of navigational links<nav> tag
+ <main></main> specifies the main content of the document
+ In side main tag  contians 
+ 	<article> that specifies independent self-contained content, 
+ 	<aside> some content aside from the content it is placed in 
+ <footer></footer>
+ 
+
+ <audio controls>
+ <source src="music.mp3" type ="audio/mpeg">
+ Your browser does not support the audio tag.
+ </audio>
+
+ <canvas id="myDrawing"> </canvas> - place in your page that you use to paint on it or used to display custom shapes.
+
+ <form></form> Helps users to interact with the site. This will publish data collected from user to the server.
+
+ <video></video> for playing audio
+
+ Frameworks for writing HTML
+ php
+ Java
+ Asp.net MVC
+ Ruby
+ python
+ Node.js
+ Go
+
+WordPress.com
+Ghost.com
+
+
+------------------------------------------------------------------------
+CSS
+
+CSS is a style sheet language used for describing the presentation of a document written in a markup language.
+
+Below are some of the CSS selectors syntax:
+------------------------------------------
+all the div elements get this style
+
+div{
+	color : blue 
+}
+
+
+all the elements that have a class attribute set to class1
+
+.class1{
+	color: blue
+}
+
+all the elements in html page that have an ID = para1
+
+#para1{
+	coloar:blue
+}
+
+we can also next things like below 
+(all paragraph elements that have div as their parents)
+div p {
+	text-align : center;
+	color: red;
+}
+
+This one select all the heading1 heading 2 and paragraph elements 
+h1, h2, p{
+	text-align : center
+	color:red;
+}
+
+
+
+CSS priority
+----------------
+
+
+<p class="specific" > Paragraph . </p>
+<p class= "specific" id="morespecific" > Paragraph with id! </p>
+
+#morespecific{
+	background-color: red;
+	border : 1px solid black;
+}
+
+.specific{
+	background-color : gray;
+	border : none !important;
+}
+
+p{
+	background-color: blue;
+	color: white;
+	padding : 5px;
+}
+
+
+-=============
+first paragraph gets specific
+second paragraph gets morespecific  background color but specific border because specific boarder has important property.
+padding is applied from p selector 
+========
+
+
+
+Advanced CSS syntax
+@media screen and (min-width: 480 px){
+	body {
+		background-color: lightgreen;
+	}
+
+}
+
+#grad{
+	background : linear-gradient(red,yellow);
+	}
+
+
+CSS libraries:
+Bootstrap
+hamburgers.css
+Font-Awesome
+Ionic
+Materialize
+
+
+CSS libraries example (bootstrap)
+<html>
+<head>
+<meta charset ="utf-8" />
+<link rel = "styleshet"
+	 href ="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css" />
+.....
+<div class ="row">
+		<div class = "col-md-4">
+		</div>
+		<div class ="col-md-4">
+		</div>
+	</div>
+
+
+CSS Preprocessors is a tool . Eg: less
+
+CSS is the styling mechanism for the web
+It is a standard of selectors, properties and attributes
+ CSS separates syle from content
+ 	- Maintainable
+ 	- Reusable
+
+CSS provides many properties
+	- Evlolving towards mobile and animations
+
+You can use CSS 
+	- Bywriting it from scratch 
+	- By using a library (BootStrap)
+	- By wiriting it using a preprocessor(LESS)
+
+------------------------------------------------------
+------------------------------------------------------
+
+JavaScript
+
+
+JavaScript is a high-leve , interpreted programming language 
+
+JavaScript can be used to manipulate HTML and to talk with services like APIs that live on other servers.
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>  My HTML page ! </title>
+</head>
+<body >
+	<button type= "button"
+		onclick="document.getElementById('demo').innerHtml=Date()">
+		See the date
+
+	</button>
+	<p id ="demo"> </p>
+</body>
+</html>
+
+---------------------------------------
+inner script  to headsection
+------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> My HTMl page !</title>
+	<script>
+			function ShowDate(){
+				document.getElementById('demo').innerHTML= Date();
+		}
+	</script>
+</head>
+<body>
+	<button type= "button"
+			onclick = "ShowDate();">
+			See the date
+	</button>
+	<p id = "demo" ></p>
+</body>
+</html>
+
+
+-----------------------------------
+Seperate File
+----------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> My HTMl page !</title>
+</head>
+<body>
+	<button type= "button"
+			onclick = "ShowDate();">
+			See the date
+	</button>
+	<p id = "demo" ></p>
+<script src ="ScriptFile.js"></script>
+</body>
+</html>
+
+
+ScriptFile.js
+
+function ShowDate(){
+	document.getElementById('demo')
+	.innerHTML = Date();
+}
+---------------------------------------
+
+Example : Interacting with the Browser
+---------------------------------------
+
+<script>
+function PromptUser(){
+	var txt;
+	var name = window.prompt("Enter your name")
+	if(name != null || name ="")
+	{
+		txt = "Hello " + name;
+	}
+
+	document.getElementById("name").innerHTML = name;
+}
+</script>
+
+
+
+-------------------------------------------------
+Making AJAX calls with JavaScript
+-----------------------------------------------
+
+AJAX is a certain technique that involves JS , it is not an additional technology
+
+<!DOCTYPE html>
+<html>
+<body>
+<div id="demo">
+<h2> My Ajax Page </h2>
+<button type = "button" onclick="loadDoc()" > Change content</button>
+</div>
+<script>
+function loadDoc(){
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function(){
+	if(this.readyState== 4 && this.status == 200){
+	document.getElementById("demo").innerHTML = this.responseText;
+	}
+	};
+	xhttp.open("GET","ajax_info.txt",true);
+	xhttp.send();
+}
+</script>
+</body>
+</html>
+
+
+JavaScripts Libraries and Frameworks
+JQuery
+Dojo toolkit
+Prototype.js
+Bootstrap
+Velocity.js
+D3.js
+
+Advanced frameworks
+Angular
+Backbone.js
+Ember.js
+Kncokout
+Node.js
+Vue.js
+React
+TypeScript
+
+
+
+Angular Example
+--------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script src+"angular.min.js" > </script>
+</head>
+<body>
+	<div ng-app="">
+		<p> Input something in the input box: </p>
+		<p> Name: <input type= "text" ng-model = "name"> </p>
+		<p ng-bind = "name" > </p>
+	</div>
+</body>
+</html>
+
+Explanation
+	<script src+"angular.min.js" > </script>--- link to angular library
+	<div ng-app=""> This tell this is an  Angular App
+	ng-model = "name" this will tells angular to take data from intput into model
+	ng-bind = "name" this tag tells angualar to bind the data from paragraph element to the data in the name model fo Angular , which comes from the textbox
+
+	--We achieve data binding with the above code 
+
+
+Points to be remember:
+JS is a lang that you can use to 
+	- Interact with HTML
+	- Interact with the web browser
+	- Interact with other systems(like APIs)
